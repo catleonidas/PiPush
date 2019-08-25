@@ -16,7 +16,7 @@ import time
 
 try:
     sio = socketio.Client()
-    sio.connect('http://d30c6238.ngrok.io')
+    sio.connect('http://6e1773f2.ngrok.io')
     jsondata = { 'auth_boolean': 0, 'error': 'hi' }
 except:
     print("Server is down")
