@@ -16,7 +16,7 @@ import time
 
 try:
     sio = socketio.Client()
-    sio.connect('http://6e1773f2.ngrok.io')
+    sio.connect('http://d30c6238.ngrok.io')
     jsondata = { 'auth_boolean': 0, 'error': 'hi' }
 except:
     print("Server is down")
@@ -221,7 +221,6 @@ class LoginWindow(Screen):
 
 class MainWindow(Screen):
     data1 = ObjectProperty(None)
-    data2 = ObjectProperty(None)
 
     def logOut(self):
         sm.current = "login"
@@ -230,7 +229,6 @@ class MainWindow(Screen):
         with open('data.json', 'r') as fileObject:
             fileData = json.load(fileObject)
             self.data1.text = str(fileData['concentration'])
-            self.data2.text = str(fileData['somethingElse'])
         os.system('rm -rf data.json')
             
     def returnStart(self):
